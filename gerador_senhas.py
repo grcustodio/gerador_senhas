@@ -3,7 +3,7 @@ import string
 
 tamanho = int(input("Digite tamanho de senha: "))
 
-letras = str(input("Deseja letra minuscula? (M)aiuscula, (m)inuscula ou (A)mbos: "))
+letras = str(input("Deseja letra (M)aiuscula, (m)inuscula ou (A)mbos?: "))
 
 while True:
     while letras not in 'MmA':
@@ -23,4 +23,4 @@ else:
     chars = string.ascii_letters + string.digits + caracteres
     rnd = random.SystemRandom()
 
-print(''.join(rnd.choice(chars) for i in range(tamanho)))
+print('Sua senha é: '+ ''.join(rnd.choice(chars) for i in range(tamanho)))
